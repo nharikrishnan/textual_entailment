@@ -1,0 +1,45 @@
+
+############################################################# README ##################################################################
+Task1 is identitying the directional realtion between the sentences
+Task2 is generating a relatedness score between 2 sentences
+
+The code was build in python version 3.7.4, for executing the code, it'll be better to use python 3.7+
+
+1.Install the required packages using:
+        pip install -r requirements.txt
+2.The output for all the models that were used for testing is present in the entailment_relatedness folder
+    A. The entailment folder inside entailment_relatedness has all the outputs for the entailment task for all the tested models
+    B. The relatedness folder inside entailment_relatedness has all the outputs for the relatedness task for all the tested models
+3.The pretrained word embedding used is the glove.6B.300d.txt the file name should also be same as whats present inside the code, if a new word embedding is to be used, the following steps should be followed
+    A. Word emebdding file should be in .txt format
+    B. the path to the word embedding should be changed inside the mainp.py file
+
+Model execution
+
+1. The main.py file executes the siamese LSTM model for Task1 and Task2 and generates the output result.txt in the output folder, before executing the code
+
+        A. Make sure that the word embedding text file is present inside the word_embeddings folder
+        B. The training, validation, test, test_annotated data should be present inside the data folder
+        c. The ouput will be written in .csv format
+        D. To execute the main.py use the command:
+              python main.py
+        E. The folder structure should not be disturbed as there are main other dependent modules
+
+2. There are 3 other ipynb(jupyter notebook) files:
+        A. main.ipynb: This contains the same code as main.py, can be executed step by step interactievely 
+        B. part_A.ipynb: This notebook contains all the models that were tested for the entailment_judgment task
+            i. The details about the models and the functons used can be found inside the notebook
+        C. part_B.ipynb: This notebook contains all the models that were tested for the relatedness task
+
+#Other modules
+1. function: function folder contains following 3 files(the description about the functions can be found inside files)
+        A. data_manipulation.py: Contains the function to convert the predicted output to the required format
+        B. model_evaluation.py: Contains the function to evaluate the predicted output, for both entailment and relatedness task
+        C. utils.py: contains all the utility functions, used for data preprocessing and model creation
+    
+2. models: models Folder contains the class models, which has the all the models used for testing and also the final model used for both the task
+        A. Details about the models can be found inside the models.py file
+
+3. Data folder: Contains the input data
+
+4. output: Result folder, the result.txt will be written to this every time the code is executed
