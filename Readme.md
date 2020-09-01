@@ -16,19 +16,3 @@ The highest accuracy was achieved using siamese LSTM for both entailment and rel
 <ul>
     <li>Entailment Task: 84%</li>
     <li>relatedness Task: 81%</li>
-
-## Getting Started
-
-The models developed can be used for any similar tasks.<br>
-Following section will help you clone and run this project in your local
-
-### Prerequisites
-
-### Prerequisites
-Python version 3.7.7 was used for development.<br>
-Python Packages required can be found in <i>'requirement.txt'</i><br>
-The packages can be installed using the command:
-```
-pip install 'package_name'
-```
-Pretrained glove.6b.50d.txt word embedding was used in the deep learning models to assign weights, the word embedding file can be downloaded from https://nlp.stanford.edu/projects/glove/. The downloaded file must be placed in the word embedding folder, any other pretrained word embedding can be also be used.
